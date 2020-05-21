@@ -1,5 +1,7 @@
 # qubes-landing-zone
 
+[![Build Status](https://travis-ci.com/3mdeb/qubes-landing-zone.svg?branch=master)](https://travis-ci.com/3mdeb/qubes-landing-zone)
+
 Qubes component description for TrenchBoot Landing-Zone
 
 ## How to build
