@@ -49,8 +49,6 @@ verify-sources: import-keys
 ifeq ($(VERIFICATION),signature)
 	@gpgv --keyring landing-zone-trustedkeys.gpg $(SIGN_FILE) $(SRC_FILE) 2>/dev/null
 else
-	# there are no signatures for rc tarballs
-	# verify locally based on a signed git tag and commit hash file
 	sha512sum --quiet -c $(HASH_FILE)
 endif
 
