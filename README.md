@@ -22,6 +22,13 @@ NO_SIGN ?= 1
 NO_CHECK ?=
 
 GIT_URL_landing_zone=https://github.com/3mdeb/qubes-landing-zone
+
+...
+
+COMPONENTS = ...
+        builder-debian \
+        builder-rpm \
+        landing-zone
 ```
 
 4. Download sources used to build Qubes:
