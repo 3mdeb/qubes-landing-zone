@@ -1,0 +1,31 @@
+%define my_builddir %_builddir/%{name}-%{version}
+
+Name:		landing-zone
+Version:	0.3.0
+Release:	1%{?dist}
+Summary:	An open source implementation of an AMD-V Secure Loader. 
+
+Group:		System
+License:	GPL
+URL:		https://github.com/TrenchBoot/landing-zone
+
+BuildRequires:	gcc
+
+Source0:        landing-zone-0.3.0.tar.gz
+
+%description
+An open source implementation of an AMD-V Secure Loader. 
+
+%prep
+tar xf %{SOURCE0}
+
+%build
+cd %my_builddir
+make
+
+%install
+mkdir -p $RPM_BUILD_ROOT/boot
+cp %my_builddir/lz_header.bin $RPM_BUILD_ROOT/boot/lz_header
+
+%files
+/boot/lz_header
