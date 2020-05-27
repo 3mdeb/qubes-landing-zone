@@ -46,8 +46,6 @@ make install-deps
 6. Build the landing-zone RPM package:
 
 ```
-make get-sources -C qubes-src/landing-zone
-make verify-sources -C qubes-src/landing-zone
 make landing-zone
 ```
 
